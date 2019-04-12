@@ -1,10 +1,12 @@
-Microsoft Azure is a private and public cloud platform. You may be familiar with the Azure Services that developers and it professionals use to build deploy and manage applications.
-
-
-
-
-
-
-
-
-
+Microsoft Azure is a private and public cloud platform. You may be familiar with the Azure services. The developers and it professionals use to build deploy and manage applications. But how does it work?
+Azure uses a technology known as virtualization virtualization separates the tight coupling between a computer CPU and its operating system using an abstraction layer called a hypervisor. The Hypervisor Emulates. All the functions of a real computer and it's CPU in a virtual machine.
+It can run multiple virtual machines at the same time, and each virtual machine can run any compatible operating system, such as Windows or Lanix Azure takes this virtualization technology and repeats it on a massive scale in Microsoft data centers throughout the world. Each data center as many racks filled with servers.
+Each server includes a hypervisor to run multiple virtual machines and networks, which provides connectivity to the servers. One server in each rack runs a special piece of software called a fabric controller.
+Each fabric controller is connected to another special piece of software known as the orchestrator.
+The orchestrator is responsible for managing everything that happens in Azure, including responding to user requests.
+Users make requests using the orchestrators Web API, the Web. API can be called by many tools, including the user interface of the Azure portal.
+When a user makes a request to create a virtual machine. The orchestrator packages. Everything that's needed fix the best server rack then sends the package and request to the fabric controller.
+Once the fabric controller has created the virtual machine the user can connect to it.
+Azure makes it easy for developers and it professionals to be agile when they build deploy and manage. Their applications and services. But this agility can have unintended consequences if unauthorized resources are created or if resources are left running after they are no longer needed.
+The solution to this problem is to use azure's resource access management tools as part of your organization's governance program.
+That's the subject of the next video in the series.
