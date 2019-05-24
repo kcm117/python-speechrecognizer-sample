@@ -29,17 +29,21 @@ speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_r
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
 
 
-
-
-
 # Transcription File
-transcript_file_name = sys.argv[1]
-if os.path.exists(transcript_file_name) == False:
-    print('\tCreating file: {}'.format(transcript_file_name))
-    with open(transcript_file_name, "w+"):
-        pass
-else:
-    print('\tAppending to file: {}'.format(transcript_file_name))
+try:
+    transcript_file_name = sys.argv[1] # If no filename provided, just print to screen
+except IndexError:
+    transcript_file_name = None
+    print("\tNo file given, printing output to screen")
+
+
+if transcript_file_name:
+    if os.path.exists(transcript_file_name) == False:
+        print('\tCreating file: {}'.format(transcript_file_name))
+        with open(transcript_file_name, "w+"):
+            pass
+    else:
+        print('\tAppending to file: {}'.format(transcript_file_name))
     
 
 done = False
@@ -52,8 +56,10 @@ def stop_cb(evt):
 
 def log_recognized(transcript_segment):
     print('RECOGNIZED: {}'.format(transcript_segment))
-    with open(transcript_file_name, 'a') as f:
-        f.write('{}\n'.format(transcript_segment))
+    
+    if transcript_file_name:
+        with open(transcript_file_name, 'a') as f:
+            f.write('{}\n'.format(transcript_segment))
 
 print("\tPress Ctrl+C to exit the program.")
 print("\tBegin Audio Transcription")
