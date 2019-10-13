@@ -34,3 +34,6 @@ Instructions:
     py speech_transcription.py transcript.txt
     ```
 7. Press ctrl+c to exit the program.
+
+Sources:
+Sample code from https://github.com/Azure-Samples/cognitive-services-speech-sdk/tree/master/samples/python/console used as a base.
