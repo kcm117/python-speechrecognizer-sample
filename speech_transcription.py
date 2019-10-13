@@ -6,6 +6,7 @@ import sys
 import json
 
 # Used Voicemeeter to transform computer audio output to microphone input (https://www.vb-audio.com/Voicemeeter/)
+# Sample code from https://github.com/Azure-Samples/cognitive-services-speech-sdk/tree/master/samples/python/console used
 
 # Creates an instance of a speech config with specified subscription key and service region.
 # Replace with your own subscription key and service region (e.g., "westus").
